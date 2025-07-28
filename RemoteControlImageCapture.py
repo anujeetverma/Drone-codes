@@ -8,6 +8,7 @@ me.connect()
 print(me.get_battery())
 global img
 me.streamon()
+#remote control
 def getKeyboardInput():
     lr,fb,up,yv =0,0,0,0
     speed = 30

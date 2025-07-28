@@ -1,5 +1,5 @@
 import pygame
-
+#ekypress checker
 def init():
     pygame.init()
     win = pygame.display.set_mode((400, 400))
