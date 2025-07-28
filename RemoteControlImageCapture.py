@@ -11,7 +11,7 @@ me.streamon()
 #remote control
 def getKeyboardInput():
     lr,fb,up,yv =0,0,0,0
-    speed = 30
+    speed = 50
     if(kp.getKey('a')): yv = -speed
     elif(kp.getKey('d')): yv = speed
 
@@ -30,6 +30,13 @@ def getKeyboardInput():
     if(kp.getKey('c')):
         cv2.imwrite(f'Resources/Images/{time.time()}.jpg', img)
         time.sleep(0.3)
+
+    if(kp.getKey('i')):me.flip_forward()
+    if(kp.getKey('k')):me.flip_back()
+    if(kp.getKey('j')):me.flip_left()
+    if(kp.getKey('l')):me.flip_right()
+
+
 
     return [lr,fb,up,yv]
 
