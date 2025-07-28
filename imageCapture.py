@@ -1,7 +1,7 @@
 from djitellopy import tello
 #from time import sleep
 import cv2
-
+#to capture image
 me = tello.Tello()
 me.connect()
 print(me.get_battery())
@@ -13,3 +13,4 @@ while True:
     img = cv2.resize(img, (360, 240))
     cv2.imshow('frame', img)
     cv2.waitKey(1)
+
