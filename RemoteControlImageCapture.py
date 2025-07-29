@@ -11,7 +11,7 @@ me.streamon()
 #remote control
 def getKeyboardInput():
     lr,fb,up,yv =0,0,0,0
-    speed = 50
+    speed = 100
     if(kp.getKey('a')): yv = -speed
     elif(kp.getKey('d')): yv = speed
 
@@ -25,18 +25,29 @@ def getKeyboardInput():
     elif(kp.getKey('RIGHT')): lr = speed
 
     if(kp.getKey('q')): me.land(); time.sleep(3)
-    if (kp.getKey('t')): me.takeoff()
+    if(kp.getKey('t')): me.takeoff()
 
     if(kp.getKey('c')):
         cv2.imwrite(f'Resources/Images/{time.time()}.jpg', img)
         time.sleep(0.3)
 
-    if(kp.getKey('i')):me.flip_forward()
-    if(kp.getKey('k')):me.flip_back()
-    if(kp.getKey('j')):me.flip_left()
-    if(kp.getKey('l')):me.flip_right()
+    if(kp.getKey('b')):
+        print(me.get_battery())
 
+    if(kp.getKey('i')):
+        me.flip_forward()
+        time.sleep(2)
+    if(kp.getKey('k')):
+        me.flip_back()
+        time.sleep(2)
+    if(kp.getKey('j')):
+        me.flip_left()
+        time.sleep(2)
+    if(kp.getKey('l')):
+        me.flip_right()
+        time.sleep(2)
 
+    if(kp.getKey('z')):print((me.get_temperature()-32)*0.55)
 
 
 
